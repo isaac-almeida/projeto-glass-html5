@@ -7,9 +7,11 @@
 
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #dddddd;
     color: rgba(0,0,0,1);
 }
+
 
 div#interface{
     width: 1100px;
@@ -24,31 +26,52 @@ p {
     text-indent: 50px;
 }
 
+a{
+    color: #6060C0;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    color:#0000AA;
+}
+
 /* formatação de imagens com legendas */
 
 figure.foto-legenda {
-    position: relative;
+    float:right;
     border: 8px solid white;
     box-shadow: 1px 1px 4px black;
 }
 
 
 figure.foto-legenda img {
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 300px;
 }
 
 figure.foto-legenda figcaption {
     opacity: 0;
-    position: absolute;
-    top:0px;    
+    top:434px;
+	position:absolute;   
     background-color: rgba(0,0,0,0.4);
-    color: white;
-    width:100%;
-    height:100%;
+    color: rgba(220, 220, 220, 0.8);
+    width:400px;
+    height:300px;
     padding: 10px;
     box-sizing: border-box;
     transition: opacity 1s;
+}
+
+figure.foto-legenda figcaption h3{
+	font-family: 'FonteLogo', sans-serif;
+	margin-top: -5px;
+}
+
+figure.foto-legenda figcaption p{
+	position:relative;
+	left: 70px;
+	top:-20px;
 }
 
 figure.foto-legenda:hover figcaption {
@@ -56,26 +79,27 @@ figure.foto-legenda:hover figcaption {
 }
 
 
-/* formatação do menu */
+/* formatação do menu -------------------------------------------*/
 
-nav#manu{
+nav#menu{
     display: block;
 }
 
 nav#menu  ul{
     list-style: none;
     text-transform: uppercase;
-    position: absolute;
     top:-20px;
     right: 20px;
+    position: fixed;
+    z-index: 1;
 }
 
 nav#menu li{
-    display: inline-block;
     background-color: #dddddd;
     padding: 10px;
-    margin: 2px;
+    margin: -2.5px;
     transition: background-color 0.66s;
+    display: inline-block;
 }
 
 nav#menu li:hover {
@@ -95,18 +119,20 @@ nav#menu a:hover{
     color: #ffffff;
 }
 
+/*---------------------------------------------------------------------------*/
+
 section#corpo{
     display: block;
-    width: 760px;
+    width: 750px;
     float: left;
     border-right: 1px solid #606060;
     padding-right: 30px;
-    padding-left: 5px;
+    padding-left: 5px; 
 }
 
 article#noticia-principal h2 {
-    font-size: 12pt;
-    color: 606060;
+    font-size: 13pt;
+    color: #606060;
     background-color: #dddddd;
     padding: 5px 0px 5px 10px;
     margin: 10px 0px 10px 0px;
@@ -117,16 +143,22 @@ header#cabecalho-artigo h1 {
     font-size: 20pt;
     color:#606060;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 header#cabecalho-artigo h2 {
-    font-size: 20pt;
+    font-size: 13t;
     color:#cecece;
     background-color:#ffffff;
 }
 
 header#cabecalho-artigo h3 {
-    
+    font-size: 12pt;
+    color: #606060;
+}
+
+.direita{
+    text-align: right;
 }
 
 table#tabelaspec {
@@ -172,7 +204,23 @@ aside#lateral{
     display: block;
     width: 290px;
     float: right; 
-    padding-right: 2.8px;
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 8px -3px 0px 6px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+aside#lateral h1{
+    font-family: 'FonteLogo';
+    font-size: 20pt;
+    color: #606060;
+}
+
+aside#lateral h2{
+    background-color: #606060;
+    color: white;
+    font-size: 13pt;
+    padding: 5px;
 }
 
 footer#rodape {
@@ -219,4 +267,16 @@ header#cabecalho h2{
     font-size: 15pt;
     color: #888888;
     margin-top:0px;
+}
+
+/*formatação videos*/
+
+video#filme2{
+	width: 300px;
+	margin-left: -4px;
+}
+
+video#filme3{
+	width:600px;
+	margin-left: 70px;
 }
